@@ -2,61 +2,61 @@ import React, {Fragment, useState, useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Formulario from './components/Formulario';
-import Cita from './components/Cita';
+import Turno from './components/Turno';
 
 
 function App() {
 
-// Citas en local storage
-let citasIniciales = JSON.parse(localStorage.getItem("citas"));
-if (!citasIniciales) {
-  citasIniciales = [];
+// Turnos en local storage
+let turnosIniciales = JSON.parse(localStorage.getItem("turnos"));
+if (!turnosIniciales) {
+  turnosIniciales = [];
 }
 
-// Array de citas
-const [citas, guardarCitas] = useState(citasIniciales);
+// Array de turnos
+const [turnos, guardarTurnos] = useState(turnosIniciales);
 
-// Usar useEffect para activar cuando cambia el state de citas
+// Usar useEffect para activar cuando cambia el state de turnos
 useEffect ( () => {
-let citasIniciales = JSON.parse(localStorage.getItem("citas"));
-  if (citasIniciales) {
-    localStorage.setItem('citas', JSON.stringify(citas))
+let turnosIniciales = JSON.parse(localStorage.getItem("turnos"));
+  if (turnosIniciales) {
+    localStorage.setItem('turnos', JSON.stringify(turnos))
   }else{
-    localStorage.setItem('citas', JSON.stringify([]));
+    localStorage.setItem('turnos', JSON.stringify([]));
   }
-}, [citas]);
+}, [turnos]);
 
-// Función que toma las citas actuales y agrega la nueva
-const crearCita = cita => {
-  guardarCitas([...citas, cita]);
+// Función que toma las turnos actuales y agrega los nuevos
+const crearTurno = turno => {
+  guardarTurnos([...turnos, turno]);
 }
 
-// Función que elimina las citas según id
-const eliminarCita = id => {
-  const nuevasCitas = citas.filter(cita => cita.id !== id);
-  guardarCitas (nuevasCitas);
+// Función que elimina las turnos según id
+const eliminarTurno = id => {
+  const nuevasTurnos = turnos.filter(turno => turno.id !== id);
+  guardarTurnos (nuevasTurnos);
 }
 
 // Mensaje condicional
-const titulo = citas.length === 0 ? 'No hay citas' : 'Administra tus citas';
+const titulo = turnos.length === 0 ? 'No hay turnos' : 'Listado de turnos';
 
   return (
     <Fragment>
-        <h1>Administrador de Pacientes</h1>
+        <h1>Veterinaria Pet Shop Boys - Administrador de turnos</h1>
         <Container>
           <Row>
             <Col>
               <Formulario
-              crearCita = {crearCita}
+              crearTurno = {crearTurno}
               />
             </Col>
             <Col>
             <h2>{titulo}</h2><br />
-            {citas.map(cita => (
-              <Cita 
-                key = {cita.id}
-                cita = {cita}
-                eliminarCita = {eliminarCita}
+            {turnos.map(turno => (
+              <Turno 
+                key = {turno.id}
+                turno = {turno}
+                eliminarTurno = {eliminarTurno}
               />
             ))}
             </Col>

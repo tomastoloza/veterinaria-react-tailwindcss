@@ -2,11 +2,11 @@ import React, {Fragment, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import uuid from 'uuid/dist/v4';
 
-const Formulario = ({crearCita}) => {
+const Formulario = ({crearTurno}) => {
 
-// Crear state citas
+// Crear state turnos
 
-const [cita, actualizarCita] = useState ({
+const [turno, actualizarTurno] = useState ({
     mascota: '',
     propietario: '',
     fecha:'',
@@ -19,8 +19,8 @@ const [error, actualizarError] = useState (false);
 // Leer los datos a medida que el usuario escribe
 
 const handleChange = e => {
-    actualizarCita({
-        ...cita,
+    actualizarTurno({
+        ...turno,
         [e.target.name] : e.target.value
     }
     )
@@ -28,11 +28,11 @@ const handleChange = e => {
 
 // Extraer los valores
 
-const {mascota, propietario, fecha, hora, sintomas} = cita;
+const {mascota, propietario, fecha, hora, sintomas} = turno;
 
 // Cuando se envía el formulario
 
-const submitCita = e => {
+const submitTurno = e => {
     e.preventDefault();
 
     // Validar
@@ -47,13 +47,13 @@ const submitCita = e => {
     actualizarError(false);
 
     // Asignar ID
-    cita.id = uuid();
+    turno.id = uuid();
 
-    // Crear Cita
-    crearCita(cita);
+    // Crear Turno
+    crearTurno(turno);
 
     // Reiniciar el form
-    actualizarCita({
+    actualizarTurno({
         mascota: '',
         propietario: '',
         fecha:'',
@@ -65,12 +65,12 @@ const submitCita = e => {
 
     return (
         <Fragment>
-            <h2>Crear cita</h2>
+            <h2>Crear turno</h2>
 
-            { error ? <p className="alerta-error"> Debe completar todos los campos </p> : null }
+            { error ? <p className="alerta-error"> Tenés que completar todos los campos </p> : null }
 
             <form
-                onSubmit={submitCita}
+                onSubmit={submitTurno}
             >
                 <label>Nombre mascota</label>
                 <input 
@@ -118,7 +118,7 @@ const submitCita = e => {
                 <button 
                 type="submit" 
                 className="btn btn-info btn-block">
-                AGREGAR CITA
+                AGREGAR TURNO
                 </button>
             </form>
         </Fragment> 
