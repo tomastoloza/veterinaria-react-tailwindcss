@@ -16,7 +16,7 @@ if (!turnosIniciales) {
 // Array de turnos
 const [turnos, guardarTurnos] = useState(turnosIniciales);
 
-// Usar useEffect para activar cuando cambia el state de turnos
+// Usamos useEffect para activar cuando cambia el state de turnos
 useEffect ( () => {
 let turnosIniciales = JSON.parse(localStorage.getItem("turnos"));
   if (turnosIniciales) {
@@ -27,17 +27,24 @@ let turnosIniciales = JSON.parse(localStorage.getItem("turnos"));
 }, [turnos]);
 
 // Función que toma las turnos actuales y agrega los nuevos
+// recordar los ... del ejercicio anterior.
+
+
 const crearTurno = turno => {
   guardarTurnos([...turnos, turno]);
 }
 
-// Función que elimina las turnos según id
+// Función que elimina las turnos según el id
+// también es parecido al carrito de compras.
+
 const eliminarTurno = id => {
   const nuevasTurnos = turnos.filter(turno => turno.id !== id);
   guardarTurnos (nuevasTurnos);
 }
 
 // Mensaje condicional
+// recordar el ternario que reemplaza al "if"
+
 const titulo = turnos.length === 0 ? 'No hay turnos' : 'Listado de turnos';
 
   return (

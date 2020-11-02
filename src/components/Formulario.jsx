@@ -4,7 +4,9 @@ import uuid from 'uuid/dist/v4';
 
 const Formulario = ({crearTurno}) => {
 
-// Crear state turnos
+// Creamos el state turnos
+// Recordar que es [nombre, función que lo modifica]
+// Inicializamos con un objeto vacío pero definido
 
 const [turno, actualizarTurno] = useState ({
     mascota: '',
@@ -16,7 +18,9 @@ const [turno, actualizarTurno] = useState ({
 
 const [error, actualizarError] = useState (false);
 
-// Leer los datos a medida que el usuario escribe
+// Esta handleChange (se acostumbra a poner así, handleLoquevenga) es para
+// leer los datos a medida que el usuario escribe
+// en lo campos del form. Así vamos validando en tiempo real
 
 const handleChange = e => {
     actualizarTurno({
@@ -30,10 +34,11 @@ const handleChange = e => {
 
 const {mascota, propietario, fecha, hora, sintomas} = turno;
 
-// Cuando se envía el formulario
+// Cuando se envía el formulario se juega todo esto.
 
 const submitTurno = e => {
     e.preventDefault();
+    // Esta prevent es para que no tire error porque al pcipio. están los campos vacíos.
 
     // Validar
 
@@ -90,7 +95,7 @@ const submitTurno = e => {
                 className="form-control"
                 onChange={handleChange}
                 />
-                <label>Fecha de alta</label>
+                <label>Fecha de la consulta</label>
                 <input 
                 type="date"
                 name="fecha"
@@ -98,7 +103,7 @@ const submitTurno = e => {
                 className="form-control"
                 onChange={handleChange}
                 />
-                <label>Hora de alta</label>
+                <label>Hora de la consulta</label>
                 <input 
                 type="time"
                 name="hora"
@@ -108,7 +113,7 @@ const submitTurno = e => {
                 />
                 <label>Síntoma</label>
                 <textarea 
-                class="form-control" 
+                className="form-control" 
                 aria-label="With textarea"
                 name="sintomas"
                 value={sintomas}
