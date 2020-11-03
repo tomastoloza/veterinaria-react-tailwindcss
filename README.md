@@ -6,3 +6,5 @@ En este proyecto implementamos varias cosas nuevas
 * Persistencia con Local Storage
 * Validación simple
 * css más vistoso
+* uuid
+* Fuentes de Google
