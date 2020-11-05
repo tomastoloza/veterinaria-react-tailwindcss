@@ -16,6 +16,9 @@ const [turno, actualizarTurno] = useState ({
     sintomas:''
 });
 
+// Creamos el state error
+// para validar las entradas del formulario
+
 const [error, actualizarError] = useState (false);
 
 // Esta handleChange (se acostumbra a poner así, handleLoquevenga) es para
