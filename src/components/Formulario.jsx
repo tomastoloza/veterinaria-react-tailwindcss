@@ -86,7 +86,7 @@ const Formulario = ({crearTurno}) => {
                             name="mascota"
                             value={mascota}
                             placeholder="Nombre de la mascota"
-                            className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"}
+                            className={"shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border border-transparent focus:ring-2 focus:ring-purple-600 focus:border-transparent"}
                             onChange={handleChange}
                         />
                     </div>
@@ -97,7 +97,7 @@ const Formulario = ({crearTurno}) => {
                             name="propietario"
                             value={propietario}
                             placeholder="Nombre del dueño"
-                            className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"}
+                            className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border border-transparent focus:ring-2 focus:ring-purple-600 focus:border-transparent"}
                             onChange={handleChange}
                         />
                     </div>
@@ -107,7 +107,7 @@ const Formulario = ({crearTurno}) => {
                             type="date"
                             name="fecha"
                             value={fecha}
-                            className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"}
+                            className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border border-transparent focus:ring-2 focus:ring-purple-600 focus:border-transparent"}
                             onChange={handleChange}
                         />
                     </div>
@@ -117,14 +117,14 @@ const Formulario = ({crearTurno}) => {
                             type="time"
                             name="hora"
                             value={hora}
-                            className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"}
+                            className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border border-transparent focus:ring-2 focus:ring-purple-600 focus:border-transparent"}
                             onChange={handleChange}
                         />
                     </div>
                     <div className={"mb-4 px-2"}>
                         <label>Síntoma</label>
                         <textarea
-                            className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"}
+                            className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border border-transparent focus:ring-2 focus:ring-purple-600 focus:border-transparent"}
                             aria-label="With textarea"
                             name="sintomas"
                             value={sintomas}
@@ -134,7 +134,7 @@ const Formulario = ({crearTurno}) => {
                     <div className={"mb-4 px-2"}>
                         <button
                             type="submit"
-                            className={"bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"}>
+                            className={"bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline border border-transparent focus:ring-2 focus:ring-purple-600 focus:border-transparent"}>
                             AGREGAR TURNO
                         </button>
                     </div>

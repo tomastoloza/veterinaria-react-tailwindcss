@@ -48,21 +48,23 @@ function App() {
     return (
         <Fragment>
             <h1 className={"font-bold text-xl"}>Veterinaria 420 Pa los Perros - Administrador de turnos</h1>
-            <div className={"flex flex-shrink-0"}>
-                <div className={"h-1/3 w-1/3 mx-auto px-4 my-4 bg-white rounded-lg shadow-lg"}>
+            <div className={"flex flex-wrap"}>
+                <div className={"min-w-3 h-1/3 w-1/3 mx-auto px-4 my-4 bg-white rounded-lg shadow-lg py-4"}>
                     <Formulario
                         crearTurno={crearTurno}
                     />
                 </div>
                 <div className={"w-1/3 mx-auto px-4 my-4 bg-white rounded-lg shadow-lg"}>
                     <h2 className={"font-bold text-black"}>{titulo}</h2><br/>
-                    {turnos.map(turno => (
-                        <Turno
-                            key={turno.id}
-                            turno={turno}
-                            eliminarTurno={eliminarTurno}
-                        />
-                    ))}
+                    <div className={"flex flex-wrap justify-around py-4 mx-auto"}>
+                        {turnos.map(turno => (
+                            <Turno
+                                key={turno.id}
+                                turno={turno}
+                                eliminarTurno={eliminarTurno}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </Fragment>
