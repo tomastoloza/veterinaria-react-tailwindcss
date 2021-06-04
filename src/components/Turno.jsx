@@ -1,16 +1,16 @@
 import React from 'react'
 
 const Turno = ({turno, eliminarTurno}) => (
-    <div className="w-1/3 px-4 py-4 border rounded-lg shadow-lg mx-4 my-4 flex flex-wrap min-w-min">
-        <p className={"py-2"}>Mascota: <span>{turno.mascota}</span></p>
-        <p className={"py-2"}>Propietario: <span>{turno.propietario}</span></p>
-        <p className={"py-2"}>Fecha: <span>{turno.fecha}</span></p>
-        <p className={"py-2"}>Hora: <span>{turno.hora}</span></p>
-        <p className={"py-2"}>Síntoma: <span>{turno.sintomas}</span></p>
+    <tr className="bg-purple-100 border border-purple-500">
+        <td className={"border border-purple-500 px-4"}><span>{turno.mascota}</span></td>
+        <td className={"border border-purple-500 px-4"}><span>{turno.propietario}</span></td>
+        <td className={"border border-purple-500 px-4"}><span>{turno.fecha}</span></td>
+        <td className={"border border-purple-500 px-4"}><span>{turno.hora}</span></td>
+        <td className={"border border-purple-500 px-4"}><span>{turno.sintomas}</span></td>
         <button
             type="button"
-            className={"place-self-center border border-red-500 hover:bg-red-200 text-red-500 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"}
-            onClick={() => eliminarTurno(turno.id)}>Eliminar &times;</button>
-    </div>
+            className={"m-4 border border-red-500 hover:bg-red-200 text-red-500 font-bold px-2 rounded-full focus:outline-none focus:shadow-outline"}
+            onClick={() => eliminarTurno(turno.id)}>&times;</button>
+    </tr>
 );
 export default Turno;

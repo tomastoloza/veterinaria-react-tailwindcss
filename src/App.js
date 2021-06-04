@@ -49,14 +49,24 @@ function App() {
         <Fragment>
             <h1 className={"font-bold text-xl"}>Veterinaria 420 Pa los Perros - Administrador de turnos</h1>
             <div className={"flex flex-wrap"}>
-                <div className={"min-w-3 h-1/3 w-1/3 mx-auto px-4 my-4 bg-white rounded-lg shadow-lg py-4"}>
+                <div className={"h-1/3 w-1/3 mx-auto px-4 my-4 bg-gray-100 rounded-lg shadow-lg min-w-min"}>
                     <Formulario
                         crearTurno={crearTurno}
                     />
                 </div>
-                <div className={"w-1/3 mx-auto px-4 my-4 bg-white rounded-lg shadow-lg"}>
+                <div className={"w-1/2 mx-auto px-4 my-4 bg-gray-100 rounded-lg shadow-lg min-w-min"}>
                     <h2 className={"font-bold text-black"}>{titulo}</h2><br/>
-                    <div className={"flex flex-wrap justify-around py-4 mx-auto"}>
+                    <table className={"table-auto text-left rounded-lg mx-auto"}>
+                        <thead>
+                            <tr className={"text-purple-500"}>
+                                <th className={"px-2"}>Mascota</th>
+                                <th className={"px-2"}>Propietario</th>
+                                <th className={"px-2 w-1/6"}>Fecha</th>
+                                <th className={"px-2"}>Hora</th>
+                                <th className={"px-2"}>Sintomas</th>
+                            </tr>
+                        </thead>
+                        <tbody className={""}>
                         {turnos.map(turno => (
                             <Turno
                                 key={turno.id}
@@ -64,7 +74,8 @@ function App() {
                                 eliminarTurno={eliminarTurno}
                             />
                         ))}
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </Fragment>

@@ -122,7 +122,7 @@ const Formulario = ({crearTurno}) => {
                         />
                     </div>
                     <div className={"mb-4 px-2"}>
-                        <label>Síntoma</label>
+                        <label>Síntomas</label>
                         <textarea
                             className={"shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border border-transparent focus:ring-2 focus:ring-purple-600 focus:border-transparent"}
                             aria-label="With textarea"
