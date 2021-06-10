@@ -56,7 +56,7 @@ function App() {
                 </div>
                 <div className={"w-1/2 mx-auto px-4 my-4 bg-gray-100 rounded-lg shadow-lg min-w-min"}>
                     <h2 className={"font-bold text-black"}>{titulo}</h2><br/>
-                    <table className={"table-auto text-left rounded-lg mx-auto"}>
+                    {turnos.length > 0 ? <table className={"table-auto text-left rounded-lg mx-auto"}>
                         <thead>
                             <tr className={"text-purple-500"}>
                                 <th className={"px-2"}>Mascota</th>
@@ -75,7 +75,7 @@ function App() {
                             />
                         ))}
                         </tbody>
-                    </table>
+                    </table> : null}
                 </div>
             </div>
         </Fragment>
