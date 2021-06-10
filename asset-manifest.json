@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/repository-name/static/css/main.7113479f.chunk.css",
-    "main.js": "/repository-name/static/js/main.8d380481.chunk.js",
-    "main.js.map": "/repository-name/static/js/main.8d380481.chunk.js.map",
-    "runtime-main.js": "/repository-name/static/js/runtime-main.d40a4e8d.js",
-    "runtime-main.js.map": "/repository-name/static/js/runtime-main.d40a4e8d.js.map",
-    "static/js/2.029e1fb4.chunk.js": "/repository-name/static/js/2.029e1fb4.chunk.js",
-    "static/js/2.029e1fb4.chunk.js.map": "/repository-name/static/js/2.029e1fb4.chunk.js.map",
-    "index.html": "/repository-name/index.html",
-    "static/css/main.7113479f.chunk.css.map": "/repository-name/static/css/main.7113479f.chunk.css.map",
-    "static/js/2.029e1fb4.chunk.js.LICENSE.txt": "/repository-name/static/js/2.029e1fb4.chunk.js.LICENSE.txt"
+    "main.css": "/tomastoloza/veterinaria-react-tailwindcss/static/css/main.7113479f.chunk.css",
+    "main.js": "/tomastoloza/veterinaria-react-tailwindcss/static/js/main.aad7f134.chunk.js",
+    "main.js.map": "/tomastoloza/veterinaria-react-tailwindcss/static/js/main.aad7f134.chunk.js.map",
+    "runtime-main.js": "/tomastoloza/veterinaria-react-tailwindcss/static/js/runtime-main.a2133281.js",
+    "runtime-main.js.map": "/tomastoloza/veterinaria-react-tailwindcss/static/js/runtime-main.a2133281.js.map",
+    "static/js/2.029e1fb4.chunk.js": "/tomastoloza/veterinaria-react-tailwindcss/static/js/2.029e1fb4.chunk.js",
+    "static/js/2.029e1fb4.chunk.js.map": "/tomastoloza/veterinaria-react-tailwindcss/static/js/2.029e1fb4.chunk.js.map",
+    "index.html": "/tomastoloza/veterinaria-react-tailwindcss/index.html",
+    "static/css/main.7113479f.chunk.css.map": "/tomastoloza/veterinaria-react-tailwindcss/static/css/main.7113479f.chunk.css.map",
+    "static/js/2.029e1fb4.chunk.js.LICENSE.txt": "/tomastoloza/veterinaria-react-tailwindcss/static/js/2.029e1fb4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d40a4e8d.js",
+    "static/js/runtime-main.a2133281.js",
     "static/js/2.029e1fb4.chunk.js",
     "static/css/main.7113479f.chunk.css",
-    "static/js/main.8d380481.chunk.js"
+    "static/js/main.aad7f134.chunk.js"
   ]
 }
